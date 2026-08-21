@@ -14,30 +14,46 @@ class Produto {
             this.preco - valorDesconto;
         return precoFinal;
     }
+
+    excluirProduto(indice) {
+        produtos.splice(indice, 1);
+        this.exibirNaTela();
+    }
+
     exibirNaTela() {
         const resultado = document.querySelector('#resultado');
         resultado.innerHTML = "";
-        produtos.forEach(produto => {
+
+        produtos.forEach((produto, indice) => {
             const precoFinal = produto.aplicarDesconto();
+
             resultado.innerHTML += `
                 <div class="produto">
                     <h2>${produto.nome}</h2>
+
                     <p>
                         <strong>Categoria:</strong>
                         ${produto.categoria}
                     </p>
+
                     <p>
                         <strong>Preço:</strong>
                         R$ ${produto.preco.toFixed(2)}
                     </p>
+
                     <p>
                         <strong>Desconto:</strong>
                         ${produto.desconto}%
                     </p>
+
                     <p class="preco-final">
                         <strong>Preço com desconto:</strong>
                         R$ ${precoFinal.toFixed(2)}
                     </p>
+
+                    <button onclick="produtos[${indice}].excluirProduto(${indice})">
+                        Excluir
+                    </button>
                 </div>
             `;
         });
