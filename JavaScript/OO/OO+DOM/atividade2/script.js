@@ -17,6 +17,9 @@ class Produto {
 
     excluirProduto(indice) {
         produtos.splice(indice, 1);
+
+        localStorage.setItem("produtos", JSON.stringify(produtos));
+
         this.exibirNaTela();
     }
 
@@ -60,12 +63,25 @@ class Produto {
     }
 }
 
-const produtos = [];
+
+// Recupera os produtos salvos no localStorage
+const produtosSalvos = JSON.parse(localStorage.getItem("produtos")) || [];
+
+const produtos = produtosSalvos.map(produto => 
+    new Produto(
+        produto.nome,
+        produto.preco,
+        produto.categoria,
+        produto.desconto
+    )
+);
+
 
 const nome = document.querySelector('#nome');
 const preco = document.querySelector('#preco');
 const categoria = document.querySelector('#categoria');
 const desconto = document.querySelector('#desconto');
+
 const botaocadastrar =
     document.querySelector('#botaocadastrar');
 
@@ -80,7 +96,17 @@ botaocadastrar.addEventListener('click', function() {
     );
 
     produtos.push(produto);
-    console.log(produtos);
-    produto.exibirNaTela();
 
+    // Salva os produtos no localStorage
+    localStorage.setItem("produtos", JSON.stringify(produtos));
+
+    console.log(produtos);
+
+    produto.exibirNaTela();
 });
+
+
+// Mostra os produtos salvos quando abrir a página
+if (produtos.length > 0) {
+    produtos[0].exibirNaTela();
+}

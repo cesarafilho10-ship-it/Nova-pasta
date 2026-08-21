@@ -59,9 +59,29 @@ botaocadastrar.addEventListener('click', function() {
         nome.value,
         Number(preco.value),
         categoria.value,
-        Number(desconto.value)
+        Number(desconto.value),
     );
     console.log(produto);
+    localStroage.setItem("produto", produto);
     produto.exibirNaTela();
 
 });
+const dados = localStrorage.getItem("produto");
+
+if (dados) {
+
+    const produtoSalvo = JSON.parse(dados);
+
+    const produto = new Produto(
+        produtoSalvo.nome,
+        produtoSalvo.preco,
+        produtoSalvo.categoria,
+        produtoSalvo.desconto,
+    );
+    if (dados) {
+        const produtoSalvo = JSON.parse(dados);
+
+        const produto = new Produto(produtoSalvo.nome, produtoSalvo.preco, produtoSalvo.categoria, produtoSalvo.desconto);}
+
+    produto.exibir();
+}
