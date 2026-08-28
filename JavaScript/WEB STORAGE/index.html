@@ -1,22 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo - web Storage</title>
+
+    <title>Cadastro de Produtos</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Exemplo - Web Storage</h1>
+    <div class="container">
 
-    <input type="text" id="nome" placeholder="Digite seu nome">
+        <h1>Cadastro de Produtos</h1>
 
-    <button id="salvar">Salvar</button>
-    <button id="recuperar">Recuperar</button>
-    <button id="remover">Remover</button>
-    
-    <p id="resultado"></p>
+        <div class="formulario">
+
+            <label for="nome">Nome do produto:</label>
+            <input type="text" id="nome" placeholder="Digite o nome">
+
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" placeholder="Digite o preço" step="0.01">
+
+            <label for="categoria">Categoria:</label>
+            <input type="text" id="categoria" placeholder="Digite a categoria">
+
+            <label for="desconto">Desconto (%):</label>
+            <input type="number" id="desconto" placeholder="Digite o desconto" min="0" max="100">
+
+            <button id="cadastrar">Cadastrar Produto</button>
+
+        </div>
+
+        <h2>Produtos cadastrados</h2>
+
+        <div id="listaProdutos"></div>
+
+    </div>
+
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
