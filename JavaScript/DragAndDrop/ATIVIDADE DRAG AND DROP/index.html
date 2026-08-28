@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alimente o Personagem</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="titulo">
+
+            <h1>ALIMENTE</h1>
+
+            <h2>O AKIRA!</h2>
+
+            <p>Arraste a comida até a boca!</p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ÁREA PRINCIPAL -->
+
+    <main>
+
+        <!-- PONTOS E VIDA -->
+
+        <aside class="status">
+
+            <div class="placar">
+
+                ⭐
+
+                <div>
+                    <span>PONTOS</span>
+
+                    <strong id="pontos">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="vida">
+
+                ❤️
+
+                <div>
+
+                    <span>VIDA</span>
+
+                    <div class="barra">
+
+                        <div id="barraVida"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- PERSONAGEM -->
+
+        <section class="area-personagem">
+
+            <div class="fala" id="fala">
+                Vamos comer! 😊
+            </div>
+
+
+            <div class="personagem-container">
+
+                <img
+                    src="personagem.jpg"
+                    alt="Personagem"
+                    class="personagem"
+                >
+
+
+                <!-- ÁREA DA BOCA -->
+
+                <div
+                    class="boca"
+                    id="boca"
+                >
+                    
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALIMENTOS DA DIREITA -->
+
+        <aside class="informacoes">
+
+            <div class="info-card">
+
+                <h3>🥗 ALIMENTOS<br>SAUDÁVEIS</h3>
+
+                <div class="exemplos">
+
+                    <span>🍎</span>
+                    <span>🥕</span>
+                    <span>🍉</span>
+
+                </div>
+
+                <p class="ganha">
+                    Dão pontos!
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>🍔 OUTROS<br>ALIMENTOS</h3>
+
+                <div class="exemplos">
+
+                    <span>🍩</span>
+                    <span>🧁</span>
+                    <span>🍔</span>
+
+                </div>
+
+                <p class="perde">
+                    Tiram pontos!
+                </p>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- COMIDAS -->
+
+    <section class="area-comidas">
+
+        <h2>ARRASTE A COMIDA</h2>
+
+
+        <div class="comidas">
+
+            <div
+                class="comida"
+                draggable="true"
+                data-pontos="10"
+                data-nome="Maçã"
+            >
+                🍎
+            </div>
+
+
+            <div
+                class="comida"
+                draggable="true"
+                data-pontos="10"
+                data-nome="Cenoura"
+            >
+                🥕
+            </div>
+
+
+            <div
+                class="comida"
+                draggable="true"
+                data-pontos="15"
+                data-nome="Melancia"
+            >
+                🍉
+            </div>
+
+
+            <div
+                class="comida"
+                draggable="true"
+                data-pontos="-5"
+                data-nome="Hambúrguer"
+            >
+                🍔
+            </div>
+
+
+            <div
+                class="comida"
+                draggable="true"
+                data-pontos="-5"
+                data-nome="Donut"
+            >
+                🍩
+            </div>
+
+
+            <div
+                class="comida"
+                draggable="true"
+                data-pontos="-5"
+                data-nome="Cupcake"
+            >
+                🧁
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENSAGEM -->
+
+    <div
+        class="mensagem"
+        id="mensagem"
+    >
+        Arraste uma comida até a boca! 👄
+    </div>
+
+
+    <button
+        id="reiniciar"
+        class="botao-reiniciar"
+    >
+        🔄 Reiniciar
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

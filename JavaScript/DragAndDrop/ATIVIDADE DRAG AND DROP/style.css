@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #82c1ed;
+
+    color: #174f99;
+
+    text-align: center;
+}
+
+
+/* =====================
+   TÍTULO
+===================== */
+
+header {
+    padding: 25px;
+}
+
+.titulo h1 {
+    color: #ffd52e;
+
+    font-size: 48px;
+
+    text-shadow: 2px 2px #174f99;
+}
+
+.titulo h2 {
+    color: white;
+
+    font-size: 30px;
+}
+
+.titulo p {
+    font-size: 18px;
+
+    margin-top: 5px;
+}
+
+
+/* =====================
+   ÁREA PRINCIPAL
+===================== */
+
+main {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 35px;
+
+    margin: 20px auto;
+
+    width: 95%;
+}
+
+
+/* =====================
+   STATUS
+===================== */
+
+.status {
+    width: 220px;
+}
+
+
+/* PONTOS */
+
+.placar {
+    background-color: #174f99;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.placar:first-letter {
+    font-size: 35px;
+}
+
+.placar span,
+.vida span {
+    display: block;
+
+    font-size: 18px;
+}
+
+.placar strong {
+    font-size: 32px;
+}
+
+
+/* VIDA */
+
+.vida {
+    background-color: #174f99;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.barra {
+    width: 150px;
+
+    height: 15px;
+
+    background-color: #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-top: 5px;
+}
+
+#barraVida {
+    width: 100%;
+
+    height: 100%;
+
+    background-color: #4dcc4d;
+
+    transition: 0.3s;
+}
+
+
+/* =====================
+   PERSONAGEM
+===================== */
+
+.area-personagem {
+    position: relative;
+}
+
+.fala {
+    background-color: white;
+
+    padding: 12px 30px;
+
+    border-radius: 15px;
+
+    margin-bottom: 12px;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+.personagem-container {
+    position: relative;
+
+    width: 350px;
+
+    height: 350px;
+
+    margin: auto;
+}
+
+.personagem {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid white;
+}
+
+
+/* BOCA */
+
+.boca {
+    position: absolute;
+
+    top: 75%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90px;
+
+    height: 55px;
+
+    border: 3px dashed white;
+
+    border-radius: 15px;
+
+    background-color: #ffffff66;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 25px;
+}
+
+.boca.ativa {
+    background-color: #4dcc5588;
+
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+/* =====================
+   CARDS DA DIREITA
+===================== */
+
+.informacoes {
+    width: 230px;
+}
+
+.info-card {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.exemplos {
+    font-size: 38px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.ganha {
+    color: green;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+.perde {
+    color: red;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+
+/* =====================
+   COMIDAS
+===================== */
+
+.area-comidas {
+    background-color: #174f99;
+
+    width: 90%;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    border-radius: 20px;
+}
+
+.area-comidas h2 {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.comidas {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.comida {
+    width: 80px;
+
+    height: 80px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 45px;
+
+    cursor: grab;
+}
+
+.comida:hover {
+    transform: scale(1.1);
+}
+
+.comida.arrastando {
+    opacity: 0.5;
+}
+
+
+/* =====================
+   MENSAGEM
+===================== */
+
+.mensagem {
+    background-color: white;
+
+    width: fit-content;
+
+    margin: 15px auto;
+
+    padding: 10px 20px;
+
+    border-radius: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =====================
+   BOTÃO
+===================== */
+
+.botao-reiniciar {
+    border: none;
+
+    background-color: #ffd52e;
+
+    color: #174f99;
+
+    padding: 10px 20px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =====================
+   CELULAR
+===================== */
+
+@media (max-width: 900px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .status {
+        width: 250px;
+    }
+
+    .personagem-container {
+        width: 300px;
+
+        height: 300px;
+    }
+
+    .informacoes {
+        width: 250px;
+    }
+}
