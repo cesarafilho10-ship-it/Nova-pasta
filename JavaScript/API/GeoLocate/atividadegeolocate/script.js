@@ -1,24 +1,79 @@
+// ============================
+// LOCALIZAÇÃO
+// ============================
+
 navigator.geolocation.getCurrentPosition(
+
     function(posicao) {
-        console.log("Latitude:", posicao.coords.latitude);
-        console.log("Longitude:", posicao.coords.longitude);
-        console.log("precision:", posicao.coords.accuracy);
-        document.getElementById("latitude").textContent = posicao.coords.latitude;
-        document.getElementById("longitude").textContent = posicao.coords.longitude;
-        document.getElementById("precisao").textContent = posicao.coords.accuracy;
+
+        document.getElementById("latitude").textContent =
+            posicao.coords.latitude;
+
+        document.getElementById("longitude").textContent =
+            posicao.coords.longitude;
+
+        document.getElementById("precisao").textContent =
+            posicao.coords.accuracy.toFixed(2);
+
     },
+
     function(error) {
-        document.getElementById("resultado").style.display = "block";
+
+        console.log("Erro na localização:", error);
+
     }
 );
+
+
+// ============================
+// CÂMERA
+// ============================
+
+const video = document.getElementById("video");
+const canvas = document.getElementById("canvas");
+const foto = document.getElementById("foto");
+const button = document.getElementById("capture");
+
 navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: true
+
+    video: true
+
 })
+
 .then(function(stream) {
-    const video = document.querySelector('#video');
+
+    console.log("Câmera funcionando!");
+
     video.srcObject = stream;
+
 })
+
 .catch(function(error) {
-    console.log("Não foi possível acessar a câmera.", error);
+
+    console.log("Erro na câmera:", error);
+
+});
+
+
+// ============================
+// TIRAR FOTO
+// ============================
+
+button.addEventListener("click", function() {
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    const contexto = canvas.getContext("2d");
+
+    contexto.drawImage(
+        video,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    foto.src = canvas.toDataURL("image/png");
+
 });

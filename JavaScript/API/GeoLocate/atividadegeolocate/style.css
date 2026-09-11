@@ -7,50 +7,72 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f5f9;
-    color: #1f2937;
-    padding: 0 40px 40px;
-}
-
-/* Container principal */
-body > * {
-    width: 100%;
-    max-width: 875px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Título */
-h1 {
+    color: #173f67;
+    padding: 30px;
     text-align: center;
-    color: #123b63;
+}
+
+h1 {
     margin-bottom: 40px;
 }
 
-/* Título da localização */
 h2 {
-    color: #123b63;
-    margin-bottom: 25px;
+    margin: 20px 0;
 }
 
-/* Caixas de localização */
 p {
-    width: 100%;
     background-color: white;
-    padding: 16px 22px;
-    margin-bottom: 12px;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 900px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px #00000015;
+    text-align: left;
 }
 
 /* Câmera */
 #video {
     display: block;
-    width: 100%;
-    max-width: 875px;
-    margin: 36px auto 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #00000025;
 
-    /* câmera espelhada */
+    /* deixa a câmera igual ao espelho */
     transform: scaleX(-1);
+}
+
+/* Botão */
+#capture {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #173f67;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#capture:hover {
+    background-color: #245987;
+}
+
+/* Canvas fica escondido */
+#canvas {
+    display: none;
+}
+
+/* Foto tirada */
+#foto {
+    display: block;
+    width: 700px;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #00000025;
 }

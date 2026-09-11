@@ -1,23 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Check-in GIN PASS</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <h1>CHECK-IN GIN PASS</h1>
+
     <h2>Minha localização</h2>
 
-<p>Latitude: <span id="latitude">---</span></p>
-<p>Longitude: <span id="longitude">---</span></p>
-<p>Precisão: <span id="precisao">---</span> metros</p>
-   
-<!-- minha aplicação de geolocation seria para realizar o check-in do gin pass para solicitar o acesso a determinada acadmeia -->
+    <p>
+        Latitude:
+        <span id="latitude">---</span>
+    </p>
+
+    <p>
+        Longitude:
+        <span id="longitude">---</span>
+    </p>
+
+    <p>
+        Precisão:
+        <span id="precisao">---</span> metros
+    </p>
+
+
+    <h2>Foto do Check-in</h2>
+
     <video id="video" autoplay></video>
-    
+
+    <br>
+
+    <button id="capture">
+        Tirar foto
+    </button>
+
+    <canvas id="canvas"></canvas>
+
+    <h3>Foto capturada:</h3>
+
+    <img id="foto" alt="Foto do check-in">
+
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
