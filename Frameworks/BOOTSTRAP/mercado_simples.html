@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercado Bom Preço</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+  <style>
+    body {
+      padding-top: 56px;
+    }
+
+    .carousel,
+    .carousel-inner,
+    .carousel-item {
+      height: 600px;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.65);
+    }
+
+    .carousel-caption {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+
+    .produto-img {
+      width: 100%;
+      height: 225px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mercado Bom Preço</a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ofertas">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search"
+            placeholder="Buscar produto" aria-label="Buscar produto">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- CARROSSEL -->
+<div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel"
+      data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#myCarousel"
+      data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#myCarousel"
+      data-bs-slide-to="2"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=85"
+        alt="Supermercado com frutas e verduras">
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>Ofertas especiais da semana!</h1>
+          <p>Confira nossas ofertas e economize nas compras do mês.</p>
+          <p><a class="btn btn-lg btn-primary" href="#produtos">Ver ofertas</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1600&q=85"
+        alt="Frutas frescas">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Frutas e verduras fresquinhas!</h1>
+          <p>Produtos frescos e selecionados para sua família.</p>
+          <p><a class="btn btn-lg btn-primary" href="#produtos">Ver produtos</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1604719312566-aa56368176cf?auto=format&fit=crop&w=1600&q=85"
+        alt="Prateleiras de supermercado">
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>Economia para toda a família!</h1>
+          <p>Encontre qualidade e bons preços em um só lugar.</p>
+          <p><a class="btn btn-lg btn-primary" href="#produtos">Conferir ofertas</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button"
+    data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+
+  <button class="carousel-control-next" type="button"
+    data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+
+<!-- APRESENTAÇÃO -->
+<section id="ofertas" class="py-5 text-center container">
+  <div class="row py-lg-4">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Produtos em destaque</h1>
+      <p class="lead text-body-secondary">
+        Confira alguns produtos do nosso mercado e aproveite as ofertas da semana.
+      </p>
+      <p>
+        <a href="#produtos" class="btn btn-primary my-2">Ver ofertas</a>
+        <a href="#sobre" class="btn btn-secondary my-2">Conheça o mercado</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos" class="album py-5 bg-body-tertiary">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+      <!-- ARROZ -->
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <img class="produto-img"
+            src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=85"
+            alt="Arroz">
+          <div class="card-body">
+            <p class="card-text">
+              Arroz tipo 1 — pacote de 5 kg. Ideal para as refeições do dia a dia.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button class="btn btn-sm btn-outline-secondary">Ver produto</button>
+                <button class="btn btn-sm btn-outline-secondary">Detalhes</button>
+              </div>
+              <small class="text-body-secondary">R$ 24,99</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEITE -->
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <img class="produto-img"
+            src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=800&q=85"
+            alt="Leite">
+          <div class="card-body">
+            <p class="card-text">
+              Leite integral — caixa de 1 litro. Uma opção para o café da manhã.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button class="btn btn-sm btn-outline-secondary">Ver produto</button>
+                <button class="btn btn-sm btn-outline-secondary">Detalhes</button>
+              </div>
+              <small class="text-body-secondary">R$ 4,79</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAÇÃ -->
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <img class="produto-img"
+            src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=85"
+            alt="Maçãs frescas">
+          <div class="card-body">
+            <p class="card-text">
+              Maçã fresca — produto selecionado para sua família.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button class="btn btn-sm btn-outline-secondary">Ver produto</button>
+                <button class="btn btn-sm btn-outline-secondary">Detalhes</button>
+              </div>
+              <small class="text-body-secondary">R$ 8,49</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- RODAPÉ -->
+<footer id="sobre" class="container py-5">
+  <div class="row">
+
+    <div class="col-6 col-md-3 mb-3">
+      <h5>Mercado Bom Preço</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Início</a></li>
+        <li class="nav-item mb-2"><a href="#ofertas" class="nav-link p-0 text-body-secondary">Ofertas</a></li>
+        <li class="nav-item mb-2"><a href="#produtos" class="nav-link p-0 text-body-secondary">Produtos</a></li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-md-3 mb-3">
+      <h5>Ajuda</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Dúvidas</a></li>
+        <li class="nav-item mb-2"><a href="#sobre" class="nav-link p-0 text-body-secondary">Sobre nós</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-5 offset-md-1 mb-3">
+      <form>
+        <h5>Receba nossas ofertas</h5>
+        <p>Fique por dentro das novidades e promoções.</p>
+        <div class="d-flex flex-column flex-sm-row gap-2">
+          <input type="email" class="form-control"
+            placeholder="Seu e-mail" aria-label="Seu e-mail">
+          <button class="btn btn-primary" type="button">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+    <p>&copy; 2026 Mercado Bom Preço. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
